@@ -9,8 +9,11 @@ import './App.css';
 
 import HomePage from './pages/homepage/';
 import ShopPage from './pages/shop/';
+import CheckOut from './pages/checkout/index';
+
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/';
 import Header from './components/header/';
+
 import { setCurrentUser } from './redux/user/user.actions';
 
 class App extends React.Component {
@@ -46,6 +49,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={CheckOut} />
+
           <Route
             exact
             path='/signin'
